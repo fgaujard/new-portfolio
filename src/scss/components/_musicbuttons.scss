@@ -1,0 +1,44 @@
+.sfx-button__player {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sfx-button__player input {
+  display: none;
+}
+
+.sfx-button__player svg {
+  overflow: visible;
+}
+
+.path {
+  fill: none;
+  stroke: white;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition:
+    stroke-dasharray 0.5s ease,
+    stroke-dashoffset 0.5s ease;
+  stroke-dasharray: 241 9999999;
+  stroke-dashoffset: 0;
+}
+
+.sfx-button__player input:checked ~ svg .path {
+  stroke-dasharray: 70.5096664428711 9999999;
+  stroke-dashoffset: -262.2723388671875;
+}
+
+/*----------------------------------------------*/
+
+.music-button__player {
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+}
+
+.music-button__icon {
+  transform: translateY(-7px);
+}

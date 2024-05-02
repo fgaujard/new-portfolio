@@ -1,0 +1,22 @@
+body {
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.section-show {
+  display: flex;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  height: 100vh;
+
+  animation: to_opacity_1 1.5s ease-in;
+}
+
+.section-hide {
+  display: none;
+}

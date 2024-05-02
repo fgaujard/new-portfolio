@@ -1,0 +1,31 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./tailwind.css";
+
+/*------------------------------------*/
+// Import your Config SCSS files here
+/*------------------------------------*/
+
+@import "./config/mixins";
+@import "./config/reset";
+@import "./config/typography";
+
+/*------------------------------------*/
+// Import Layouts Configs here
+/*------------------------------------*/
+
+@import "./layouts/section";
+
+/*------------------------------------*/
+// Import Components Styles here
+/*------------------------------------*/
+
+@import "./components/navbar";
+@import "./components/musicbuttons";
+
+/*------------------------------------*/
+// Import Pages Styles here
+/*------------------------------------*/
+@import "./pages/home";
+@import "./pages/contact";

@@ -1,0 +1,76 @@
+.app_navbar {
+  z-index: 1;
+  width: calc(100% - 24vw);
+  margin-top: 6rem;
+  margin-left: 12vw;
+  height: min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  position: fixed;
+  animation: to_opacity_1 2s;
+
+  /*------------------------------------*/
+
+  .navbar-menu__left {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .navbar-menu__link {
+    color: #fff;
+    line-height: 2;
+    position: relative;
+    scale: 1;
+    transition: scale 0.33s;
+  }
+
+  .navbar-menu__link:hover {
+    scale: 1.1;
+    transition: scale 0.33s;
+  }
+
+  .navbar-menu__link::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -0.1rem;
+    left: 50%;
+    transition:
+      width 0.33s,
+      left 0.33s;
+  }
+
+  .navbar-menu__link:hover::before {
+    width: 100%;
+    left: 0;
+  }
+
+  /*------------------------------------*/
+
+  .navbar-menu__right {
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+    margin-left: 5rem;
+  }
+
+  .navbar-contact__link {
+    padding: 1rem;
+    border: solid 2px white;
+    border-radius: 1.5rem;
+    z-index: 2;
+    margin-left: 2.5rem;
+
+    scale: 1;
+    transition: scale 0.33s;
+
+    &:hover {
+      scale: 0.9;
+      transition: scale 0.33s;
+    }
+  }
+}
