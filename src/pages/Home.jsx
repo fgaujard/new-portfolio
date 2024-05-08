@@ -9,12 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   const gsapScrollTextBlock = useRef(null);
-  const gsapScrollKeyPress = useRef(null);
+  const gsapCallScroll = useRef(null);
   const gsapScrollBackground = useRef(null);
 
   useEffect(() => {
     gsap.to(gsapScrollTextBlock.current, {
       opacity: 0,
+      scale: 0.95,
+      translateX: "-2.5rem",
       scrollTrigger: {
         trigger: gsapScrollTextBlock.current,
         start: "top center",
@@ -23,12 +25,14 @@ function Home() {
       },
     });
 
-    gsap.to(gsapScrollKeyPress.current, {
+    gsap.to(gsapCallScroll.current, {
+      animation: "to_opactity_1 0.5s ease-in",
+      translateX: "100vw",
       opacity: 0,
       scrollTrigger: {
-        trigger: gsapScrollKeyPress.current,
-        start: "top center+=30%",
-        end: "bottom center",
+        trigger: gsapCallScroll.current,
+        start: "top bottom-=15%",
+        end: "bottom center-=30%",
         scrub: 1,
       },
     });
@@ -59,11 +63,11 @@ function Home() {
           digital playground
         </h1>
         <h2 className="homepage-textblock_subtitle">
-          Web Development / Web Design / 3D & Animations
+          web development \ web design \ 3D & animations
         </h2>
       </div>
-      <p className="homepage-scrollcall-text" ref={gsapScrollKeyPress}>
-        press escape <br /> to scroll down
+      <p className="homepage-scrollcall-text" ref={gsapCallScroll}>
+        ⪽ scroll down ⪾
       </p>
     </section>
   );
