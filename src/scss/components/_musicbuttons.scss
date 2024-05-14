@@ -1,9 +1,13 @@
 .sfx-button__player {
-  font-size: small;
+  font-size: medium;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
+
+  p {
+    font-size: small;
+  }
 }
 
 .sfx-button__player input {
@@ -38,7 +42,6 @@
   font-size: small;
   cursor: pointer;
   display: flex;
-  gap: 4px;
 }
 
 .music-button__icon {

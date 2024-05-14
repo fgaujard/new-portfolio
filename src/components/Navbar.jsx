@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <header className="app_navbar">
-      <div className="navbar-menu__left">
+      <nav className="navbar-menu__left">
         <a
           href="Home"
           className="navbar-menu__link "
@@ -47,7 +47,7 @@ function Navbar() {
         >
           TRAINING
         </a>
-      </div>
+      </nav>
 
       <div className="navbar-menu__right">
         <MusicButton />

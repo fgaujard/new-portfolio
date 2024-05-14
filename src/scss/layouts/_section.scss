@@ -9,9 +9,10 @@ html {
 
 .section-show {
   display: flex;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  // scroll-snap-align: start;
+  // scroll-snap-stop: always;
 
+  padding: 0 10rem;
   height: 100vh;
 
   animation: to_opacity_1 1.5s ease-in;

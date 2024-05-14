@@ -5,16 +5,21 @@
 }
 
 .homepage-textblock {
+  cursor: default;
   position: fixed;
   z-index: 1;
   height: min-content;
   bottom: 20%;
-  margin-left: 10rem;
 
   display: flex;
   flex-direction: column;
 
   translate: -5px;
+
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none;
 
   .homepage-textblock_title {
     font-weight: 400;
@@ -38,6 +43,11 @@
   position: fixed;
   bottom: 3rem;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-75px);
   animation: opacity_loop 2s ease-in-out infinite;
+
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none;
 }

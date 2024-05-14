@@ -9,4 +9,40 @@ html,
 body,
 section {
   background-color: black;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #ffffff50 #00000000;
+
+  &:hover {
+    scrollbar-color: #fff;
+  }
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #00000000;
+
+  &:hover {
+    background: #fff;
+  }
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff50;
+  border-radius: 10px;
+  border: 3px solid #ffffff50;
+
+  &:hover {
+    background-color: #fff;
+  }
 }
