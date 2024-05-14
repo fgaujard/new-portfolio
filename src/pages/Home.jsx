@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   const gsapScrollTextBlock = useRef(null);
-  const gsapCallScroll = useRef(null);
+  const gsapCallToScroll = useRef(null);
   const gsapScrollBackground = useRef(null);
 
   useEffect(() => {
@@ -25,12 +25,12 @@ function Home() {
       },
     });
 
-    gsap.to(gsapCallScroll.current, {
+    gsap.to(gsapCallToScroll.current, {
       animation: "to_opactity_1 0.5s ease-in",
       translateX: "100vw",
       opacity: 0,
       scrollTrigger: {
-        trigger: gsapCallScroll.current,
+        trigger: gsapCallToScroll.current,
         start: "top bottom-=15%",
         end: "bottom center-=30%",
         scrub: 1,
@@ -66,7 +66,7 @@ function Home() {
           web development \ web design \ 3D & animations
         </h2>
       </div>
-      <p className="homepage-scrollcall-text" ref={gsapCallScroll}>
+      <p className="homepage-scrollcall-text" ref={gsapCallToScroll}>
         ⪽ scroll down ⪾
       </p>
     </section>

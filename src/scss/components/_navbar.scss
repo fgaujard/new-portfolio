@@ -1,7 +1,7 @@
 .app_navbar {
   z-index: 1;
   width: 100%;
-  margin-top: 4rem;
+  padding: 4rem 10rem 0;
   height: min-content;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,6 @@
   /*------------------------------------*/
 
   .navbar-menu__left {
-    margin-left: 10rem;
     display: flex;
     gap: 3rem;
   }
@@ -55,14 +54,13 @@
   .navbar-menu__right {
     display: flex;
     align-items: baseline;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-left: 5rem;
-    margin-right: 10rem;
   }
 
   .navbar-contact__link {
     padding: 0.75rem 1rem;
-    border: solid 2px white;
+    border: solid 2px #fff;
     border-radius: 1rem;
     z-index: 2;
     margin-left: 1rem;
