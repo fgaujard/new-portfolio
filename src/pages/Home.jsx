@@ -51,11 +51,11 @@ function Home() {
 
   return (
     <section id="home" className="section-show">
-      {/* <Spline
+      <Spline
         className="homepage-background_spline"
         scene="https://prod.spline.design/olJ-Kn3zSGvOks5f/scene.splinecode"
         ref={gsapScrollBackground}
-  /> */}
+      />
 
       <div className="homepage-textblock" ref={gsapScrollTextBlock}>
         <h1 className="homepage-textblock_title">
