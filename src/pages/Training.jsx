@@ -1,6 +1,6 @@
 function Training() {
   return (
-    <section id="app_section_training" className="section-show">
+    <section id="training" className="section-show">
       <h1>Training</h1>
     </section>
   );

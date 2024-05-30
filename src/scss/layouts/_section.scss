@@ -3,10 +3,6 @@ body {
   overscroll-behavior-x: none;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-}
-
 .section-show {
   display: flex;
   // scroll-snap-align: start;
@@ -20,4 +16,8 @@ html {
 
 .section-hide {
   display: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
