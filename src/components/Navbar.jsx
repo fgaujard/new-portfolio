@@ -16,34 +16,56 @@ function Navbar() {
     }
   };
 
+  const handleClick = (e, section) => {
+    e.preventDefault();
+    if (section === "accueil") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      const targetSection = document.getElementById(section);
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
+
   return (
     <header className="app_navbar">
       <nav className="navbar-menu__left">
         <a
-          href="Home"
+          href="#home"
           className="navbar-menu__link "
           onMouseEnter={playHoverSound}
+          onClick={((e) => handleClick(e), "home")}
         >
           HOME
         </a>
         <a
-          href="Home"
+          href="#projects"
           className="navbar-menu__link "
           onMouseEnter={playHoverSound}
+          onClick={((e) => handleClick(e), "projects")}
         >
           PROJECTS
         </a>
         <a
-          href="Home"
+          href="#skills"
           className="navbar-menu__link "
           onMouseEnter={playHoverSound}
+          onClick={((e) => handleClick(e), "skills")}
         >
           SKILLS
         </a>
         <a
-          href="Home"
+          href="#training"
           className="navbar-menu__link "
           onMouseEnter={playHoverSound}
+          onClick={((e) => handleClick(e), "training")}
         >
           TRAINING
         </a>
@@ -55,9 +77,10 @@ function Navbar() {
         <SfxButton sfx={sfx} setSfx={setSfx} />
 
         <a
-          href="Home"
+          href="#contact"
           className="navbar-contact__link"
           onMouseEnter={playHoverSound}
+          onClick={((e) => handleClick(e), "contact")}
         >
           CONTACT
         </a>

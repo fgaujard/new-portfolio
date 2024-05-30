@@ -1,31 +1,30 @@
 .app_section_projects {
-  padding: 12rem 10rem;
+  padding: 20vh 10rem 20vh 10rem;
+
+  .projects-content {
+    display: flex;
+  }
 
   .projects-table {
-    z-index: 1;
+    z-index: 10;
     width: 50%;
 
-    cursor: default;
+    display: block;
+    overflow-y: scroll;
 
-    tbody {
-      display: block;
-      overflow-y: auto;
-      max-height: 65vh;
-    }
+    cursor: default;
   }
 
   th,
   td {
     width: 100vw;
-    border-bottom: 1px solid #ffffff50;
     padding: 2.2rem 1.5rem;
-    text-align: left;
-    color: #ffffff50;
-    font-size: 0.7rem;
 
-    button {
-      color: #ffffff50;
-    }
+    border-bottom: 1px solid #ffffff50;
+    color: #ffffff50;
+
+    text-align: left;
+    font-size: 0.7rem;
   }
 
   th {
@@ -34,49 +33,61 @@
   }
 
   tr {
+    cursor: pointer;
     td:first-child {
       width: 100%;
     }
-    td:last-child {
-      text-align: right;
-      width: 4rem;
-    }
 
     &:hover {
-      th,
-      td {
-        border-bottom: 1px solid #fff;
-        color: #fff;
-
-        button {
-          color: #fff;
-        }
+      td,
+      th {
+        border-bottom: 1px solid #ffffff;
+        color: #ffffff;
       }
     }
   }
 
-  .table-date {
+  .projects-table__date {
     text-align: center;
     font-weight: 200;
-    padding: 2.2rem 1rem;
   }
 }
 
 .projects-article {
-  width: 50%;
+  width: calc(50% - 5rem);
   margin-left: 5rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  .projects-article__header {
-    margin-top: 18px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  .projects-article__frame {
+    margin-bottom: 2rem;
+    border-radius: 1rem;
   }
 
-  img {
-    height: 300px;
+  .projects-article__body {
+    width: 100%;
+    min-height: 180px;
+    text-align: justify;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 1rem 0;
+    border-bottom: 1px solid #ffffff;
+
+    a {
+      position: absolute;
+      right: 0;
+      bottom: 1rem;
+    }
   }
+}
+
+.projects-table__rows_hover th,
+.projects-table__rows_hover td {
+  border-bottom: 1px solid #fff;
+  color: #fff;
 }

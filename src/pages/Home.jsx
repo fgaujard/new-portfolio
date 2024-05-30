@@ -17,6 +17,7 @@ function Home() {
       opacity: 0,
       scale: 0.95,
       translateX: "-2.5rem",
+      zIndex: 0,
       scrollTrigger: {
         trigger: gsapScrollTextBlock.current,
         start: "top center",
@@ -49,12 +50,12 @@ function Home() {
   }, []);
 
   return (
-    <section id="app_section_home" className="section-show">
-      <Spline
+    <section id="home" className="section-show">
+      {/* <Spline
         className="homepage-background_spline"
         scene="https://prod.spline.design/olJ-Kn3zSGvOks5f/scene.splinecode"
         ref={gsapScrollBackground}
-      />
+  /> */}
 
       <div className="homepage-textblock" ref={gsapScrollTextBlock}>
         <h1 className="homepage-textblock_title">

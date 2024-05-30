@@ -1,0 +1,53 @@
+.app_section_skills {
+  padding: 0 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee {
+  z-index: 10;
+  height: min-content;
+  max-height: fit-content;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+      width: 10rem;
+      height: 10rem;
+
+      border: 1px solid white;
+      border-radius: 1rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin: 1rem;
+      transition: all 0.3s;
+
+      i {
+        font-size: 3rem;
+        color: white;
+        transition: all 0.3s;
+      }
+
+      &:hover {
+        scale: 1.1;
+        border: 1px solid blueviolet;
+        transition: all 0.3s;
+        i {
+          color: blueviolet;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
